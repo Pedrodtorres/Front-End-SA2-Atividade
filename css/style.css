@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rationale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rationale&family=Revalia&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #272323;
+    height: 130px;
+}
+
+footer{
+    background-color: #272323;
+    height: 81px;
+}
+
+.container-grid{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    position: relative;
+    left: 50px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+}
+
+.banner{
+    width: auto;
+    height: 337px;
+    background-color: #7d7765;
+}
+
+.banner img{
+    position: relative;
+    top: 8px;
+    left: 350px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.noticias{
+    width: auto;
+    height: 806px;
+    background-color: #DFDADA;
+}
+
+.texto-news-noticias h1{
+    left: 350px;
+    color: black;
+    font-size: 40px;
+    font-family: 'Rationale', sans-serif;
+    position: relative;
+}
+
+.texto-vermais-noticias a{
+    top: 700px;
+    right: 300px;
+    color: black;
+    font-size: 30px;
+    font-family: 'Rationale', sans-serif;
+    text-decoration: underline;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.footer-menu{
+    position: relative;
+    width: 825px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu a{
+    color: white;
+    font-family: 'Rationale', sans-serif;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.noticia-banner img{
+    position: relative;
+    top: 30px;
+    left: 385px;
+    width: 400px;
+    height: 550px;
+    justify-content: space-between;
+}
