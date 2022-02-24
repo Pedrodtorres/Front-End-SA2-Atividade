@@ -10,15 +10,32 @@ function enviarEmail(){
 
 let listaNoticias = [
     {
-        titulo: "Noticia da boa",
-        Descrição: "Essa é uma das noticias"
+        titulo: "Notícia da boa",
+        descricao: "Essa é uma das notícias"
     },    
     {
-        titulo: "Noticia da boa",
-        Descrição: "Essa é uma das noticias"
+        titulo: "Outra notícia da boa",
+        descricao: "Essa é outra das notícias"
     },    
     {
-        titulo: "Noticia da boa",
-        Descrição: "Essa é uma das noticias"
-    }
+        titulo: "Mais uma notícia da boa",
+        descricao: "Essa é mais uma das notícias"
+    },
 ]
+
+function renderizarNoticias() {
+    let espaco = document.getElementById("espaco-noticia")
+    
+    let template = "";
+    
+    for (let index = 0; index < listaNoticias.length; index++) {
+        const noticias = listaNoticias[index];
+
+        template += `<div class="card-noticias">
+        <img src="img/noticias1.jpg" alt="noticia">
+        <h5>${noticias.titulo}</h3>
+        <p>${noticias.descricao}</p>
+    </div>` 
+    }
+    espaco.innerHTML = template;
+}

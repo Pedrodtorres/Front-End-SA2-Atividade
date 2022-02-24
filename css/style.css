@@ -290,13 +290,7 @@ footer{
     .card-noticias{
         margin-left: 30px;
     }
-    .noticia3-banner{
-        display: none;
-    }
-    .noticia3-h5{
-        display: none;
-    }
-    .noticia3-p{
+    .card-noticias:nth-child(2){
         display: none;
     }
 }
