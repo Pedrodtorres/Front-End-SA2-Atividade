@@ -7,3 +7,18 @@ function enviarEmail(){
             window.alert("Seu E-Mail é invalido ou já foi usado por outro Usuario")
         }
 }
+
+let listaNoticias = [
+    {
+        titulo: "Noticia da boa",
+        Descrição: "Essa é uma das noticias"
+    },    
+    {
+        titulo: "Noticia da boa",
+        Descrição: "Essa é uma das noticias"
+    },    
+    {
+        titulo: "Noticia da boa",
+        Descrição: "Essa é uma das noticias"
+    }
+]

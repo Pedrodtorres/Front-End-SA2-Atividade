@@ -20,10 +20,10 @@
                 <a href="">Mobile</a>
                 <a href="">Campeonatos</a>
             </nav>
-            <a href="" onclick="mostrarMenu()"><img class="barras" src="img/menubarras.png" alt=""></a>
             <nav class="menu-entrar">
                 <a href="">Entrar</a>
             </nav>        
+            <a href="" onclick="mostrarMenu()"><img class="barras" src="img/menubarras.png" alt=""></a>
         </div>
     </header>
     <div class="banner">
@@ -36,10 +36,22 @@
         <div class="texto-news-noticias container">
             <h1>News</h1>
         </div>
-        <div class="noticia-banner container">
-            <a href=""><img class="noticia1-banner" src="img/noticia1.png" alt="noticia1"></a>
-            <a href=""><img class="noticia2-banner" src="img/noticia2.png" alt="noticia2"></a>
-            <a href=""><img class="noticia3-banner" src="img/noticia3.png" alt="noticia3"></a>
+        <div class="espaco-noticia-banner container">
+            <div class="card-noticias">
+                <img class="noticia1-banner" src="img/noticias1.jpg" alt="noticia1">
+                <h5>Título da notícia</h3>
+                <p>Não obstante, a consolidação das estruturas deve passar por modificações independentemente de todos os recursos funcionais envolvidos.</p>
+            </div>
+            <div class="card-noticias">
+                <img class="noticia2-banner" src="img/noticias2.jpg" alt="noticia2">
+                <h5>Título da notícia</h3>
+                <p>Não obstante, a consolidação das estruturas deve passar por modificações independentemente de todos os recursos funcionais envolvidos.</p>
+            </div>
+            <div class="card-noticias">
+                <img class="noticia3-banner" src="img/noticias3.jpg" alt="noticia3">
+                <h5 class="noticia3-h5">Título da notícia</h3>
+                <p class="noticia3-p">Não obstante, a consolidação das estruturas deve passar por modificações independentemente de todos os recursos funcionais envolvidos.</p>
+            </div>
         </div>
         <div class="texto-vermais-noticias container">
             <a href="">Ver Mais</a>
@@ -47,14 +59,14 @@
     </div>
     <footer>
         <div class="links-footer">
-            <div class="container-grid footer-menu container">
+            <div class="footer-menu container">
                 <a href="">Pagina Inicial</a>
                 <a href="">Contato</a>
                 <a href="">Publicidade</a>
                 <a href="">Sobre</a>
             </div>
             <div class="footer-suporte-email container">
-                <h2>Gostaria de receber noticias em seu E-mail?</h2>
+                <h2>Gostaria de receber notícias em seu E-mail?</h2>
                 <form action="">
                     <input id="campo-email" type="email" placeholder="E-Mail">
                     <button class="enviar-email" onclick="enviarEmail()">Cadastrar</button>
