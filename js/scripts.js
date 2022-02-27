@@ -4,6 +4,7 @@ $(document).ready(function(){
     })
 })
 
+// Diferentes possibilidades
 // $(document).ready(function(){
 
 //     $("#barras").click(function(){
@@ -30,15 +31,45 @@ function slide(){
     }
 }
 
-let emailUsuario = document.getElementById("campo-email");
-
 function enviarEmail(){
+    let emailUsuario = document.getElementById("campo-email");
         if(emailUsuario.value !== ""){
-        window.alert(`Olá ${emailUsuario.value}.\nVocê concluiu seu cadastro com sucesso!`)
+            window.alert(`Olá ${emailUsuario.value}.\nVocê concluiu seu cadastro com sucesso!`)
         }else{
             window.alert("Seu E-Mail é invalido ou já foi usado por outro Usuario")
         }
 }
+
+function validarRegistro(){
+    let emailUsuario = document.getElementById("email");
+    let emailConfirmacao = document.getElementById("email-confirmacao");
+    let senhaUsuario = document.getElementById("senha");
+    let senhaConfirmacao = document.getElementById("confirmacao-senha");
+    let nomeUsuario = document.getElementById("nome");
+    let sobrenomeUsuario = document.getElementById("sobrenome");
+    let checkboxCheck = document.getElementById("agreement");
+        if(emailUsuario.value == emailConfirmacao.value && emailUsuario.value !== "" && senhaUsuario.value == senhaConfirmacao.value && senhaUsuario.value !== "" && checkboxCheck.checked == true){
+            window.alert(`olá ${nomeUsuario.value} ${sobrenomeUsuario.value}.\nSeu cadastro foi efetuado com sucesso.`)
+        }else if(emailUsuario.value != emailConfirmacao.value){
+            window.alert("E-mail e confirmação do e-mail diferentes.")
+        }else if(emailUsuario.value == emailConfirmacao.value && emailUsuario.value !== "" && checkboxCheck.checked == true && senhaUsuario.value != senhaConfirmacao.value){
+            window.alert("Senha e confirmação de senha estão diferentes")
+        }else if(emailUsuario.value == emailConfirmacao.value && emailUsuario.value !== "" && senhaUsuario.value == senhaConfirmacao.value && senhaUsuario.value !== "" && checkboxCheck.checked == false){
+            window.alert(`Para se cadastrar você precisa aceitar nossos termos de uso`)
+        }else if(emailUsuario.value == emailConfirmacao.value && emailUsuario.value !== "" && checkboxCheck.checked == false && senhaUsuario.value != senhaConfirmacao.value){
+            window.alert("Senha e confirmação de senha estão diferentes")
+        }else{
+            window.alert("Você precisa preencher todos os campos para efetuar o registro")
+        }
+}
+
+// Testando checkbox
+// function validarRegistro(){
+//     let checkboxCheck = document.getElementById("agreement");
+//         if(checkboxCheck.checked == true){
+//             window.alert(`foi ${checkboxCheck.checked}`)
+//         }
+// }
 
 let listaNoticias = [
     {
