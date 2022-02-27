@@ -29,7 +29,7 @@ footer{
 }
 
 .menu{
-    width: 700px;
+    width: 900px;
     padding: 50px;
 }
 
@@ -43,24 +43,15 @@ footer{
 }
 
 .menu-entrar{
-    width: 120px;
     background-color: orange;
-    border-radius: 15px;
-    margin-right: 110px;
-}
-
-.menu-entrar a{
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
-    margin-left: 9px;
+    border-radius: 35px;
 }
 
 .barras{
     width: 100px;
     display: none;
+    border:2px solid black;
+    border-radius: 100px;
 }
 
 .banner{
@@ -70,9 +61,18 @@ footer{
 }
 
 .banner img{
-    width: 600px;
+    width: 1000px;
+    height: 310px;
     margin-top: 13px;
-    margin-left: 30px;
+    margin-left: 175px;
+}
+
+#carrosel img{
+    display: none;
+}
+
+.banner-ativo{
+    display: flex;
 }
 
 .noticias{
@@ -163,12 +163,21 @@ footer{
     justify-content: center;
 }
 
+li{
+    list-style: none;
+}
+
+.posicionamento-header{
+    position: relative;
+}
+
 @media screen and (max-width:1400px){
     .banner-opicional{
         display: none;        
     }
     .banner-img img{
-        margin-left: 350px;
+        width: 800px;
+        margin-left: 150px;
     }
     .noticia-banner img{
         margin-left: 100px;
@@ -180,12 +189,8 @@ footer{
         margin-left: 14px;
         font-size: 20px;
     }
-    .menu-entrar{
-        margin-right: 200px;
-        width: 100px;
-    }
     .menu{
-        width: 610px;
+        width: 810px;
     }
     .menu a{
         font-size: 20px;
@@ -197,19 +202,15 @@ footer{
         display: none;        
     }
     .menu{
-        width: 570px;
+        width: 670px;
     }
     .menu a{
         font-size: 16px;
-        width: 100px;
     }
-    .menu-entrar a{
-        font-size: 16px;
-        margin-left: 10px;
-    }
-    .menu-entrar{
-        margin-right: 180px;
-        width: 80px;
+    .banner-img img{
+        width: 600px;
+        height: 300px;
+        margin-left: 270px;
     }
 }
 
@@ -218,14 +219,15 @@ footer{
         display: none;        
     }
     .banner-img img{
-        margin-left: 200px;
+        width: 670px;
+        margin-left: 130px;
     }
     .noticia-banner img{
         position: relative;
         left: 170px;
     }
     .menu{
-        width: 570px;
+        width: 670px;
     }
     .menu a{
         font-size: 16px;
@@ -235,10 +237,6 @@ footer{
         font-size: 16px;
         margin-left: 10px;
     }
-    .menu-entrar{
-        margin-right: 180px;
-        width: 80px;
-    }
 }
 
 @media screen and (max-width:992px){
@@ -246,7 +244,7 @@ footer{
         font-size: 15px;
     }
     .menu{
-        width: 450px;
+        width: 650px;
         margin-right: 30px;
         padding: 3px;
     }
@@ -261,31 +259,24 @@ footer{
         font-size: 20px;
     }
     .banner-img img{
-        margin-left: 180px;
+        margin-left: 150px;
     }
 }
 
 @media screen and (max-width:991px){
     .menu a{
+        margin-right: -10px;
         font-size: 15px;
     }
     .menu{
-        width: 450px;
-        margin-right: 30px;
-        padding: 3px;
-    }
-    .menu-entrar{
-        margin-right: 10px;
-    }
-    .menu-entrar a{
-        font-size: 15px;
-        margin-left: 10px;
+        width: 700px;
     }
     .footer-menu a{
         font-size: 20px;
     }
     .banner-img img{
-        margin-left: 50px;
+        width: 600px;
+        margin-left: 60px;
     }
     .card-noticias{
         margin-left: 30px;
@@ -293,21 +284,34 @@ footer{
     .card-noticias:nth-child(2){
         display: none;
     }
+    .menu-entrar a{
+        margin-right: 0px;
+    }
 }
 
 @media screen and (max-width:768px){
     .barras{
         display: inline-block;
+        margin-left: 255px;
     }
     .menu{
         display: none;
         flex-direction: column;
-        width: 550px;
-        height: 550px;
-        background-color: black;
+        width: 150px;
+        height: 300px;
+        background-color: #2980b8;
+        border-radius: 25px;
+        position: absolute;
+        right: 60px;
+        top: 60px;
+        border: 2px solid #272323;
     }
-    .menu-entrar a{
-        display: none;
+    .menu a{
+        padding: 15px;
+    }
+    .menu-entrar{
+        margin-left: 19px;
+        margin-top: 8px;
     }
     .footer-menu{
         height: 50px;
@@ -315,22 +319,12 @@ footer{
     footer{
         height: 160px;
     }
+    .menu-ativo{
+        display: flex;
+    }
 }
 
 @media screen and (max-width:767px){
-    .barras{
-        display: inline-block;
-    }
-    .menu{
-        display: none;
-        flex-direction: column;
-        width: 550px;
-        height: 550px;
-        background-color: black;
-    }
-    .menu-entrar a{
-        display: none;
-    }
     .footer-menu{
         height: 50px;
     }
@@ -339,7 +333,9 @@ footer{
     }
     .banner-img img{
         width: 500px;
-        margin-left: 20px;
+        height: 300px;
+        margin-left: 15px;
+        margin-top: 17px;
     }
     .noticias{
         height: 1500px;
@@ -353,5 +349,8 @@ footer{
     }
     .texto-vermais-noticias a{
         margin-top: 0px;
+    }
+    .menu-ativo{
+        display: flex;
     }
 }
