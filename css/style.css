@@ -190,6 +190,7 @@ li{
     background-color: white;
     border-radius: 10px;
     padding: 20px;
+    box-shadow: 10px 10px #e7e9eb;
 }
 
 label{
@@ -379,28 +380,35 @@ input[type="submit"]{
     .footer-menu{
         height: 50px;
     }
+
     footer{
         height: 160px;
     }
+
     .banner-img img{
         width: 500px;
         height: 300px;
         margin-left: 15px;
         margin-top: 17px;
     }
+
     .noticias{
         height: 1500px;
     }
+
     .espaco-noticia-banner{
         display: block;
         height: 1200px;
     }
+
     .card-noticias{
         margin-left: 100px;
     }
+
     .texto-vermais-noticias a{
         margin-top: 0px;
     }
+
     .menu-ativo{
         display: flex;
     }
