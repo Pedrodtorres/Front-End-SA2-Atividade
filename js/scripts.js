@@ -41,25 +41,37 @@ function enviarEmail(){
 }
 
 function validarRegistro(){
-    let emailUsuario = document.getElementById("email");
+    let emailUsuarioRegistro = document.getElementById("email");
     let emailConfirmacao = document.getElementById("email-confirmacao");
     let senhaUsuario = document.getElementById("senha");
     let senhaConfirmacao = document.getElementById("confirmacao-senha");
     let nomeUsuario = document.getElementById("nome");
     let sobrenomeUsuario = document.getElementById("sobrenome");
     let checkboxCheck = document.getElementById("agreement");
-        if(emailUsuario.value == emailConfirmacao.value && emailUsuario.value !== "" && senhaUsuario.value == senhaConfirmacao.value && senhaUsuario.value !== "" && checkboxCheck.checked == true){
+        if(emailUsuarioRegistro.value == emailConfirmacao.value && emailUsuarioRegistro.value !== "" && senhaUsuario.value == senhaConfirmacao.value && senhaUsuario.value !== "" && checkboxCheck.checked == true){
             window.alert(`olá ${nomeUsuario.value} ${sobrenomeUsuario.value}.\nSeu cadastro foi efetuado com sucesso.`)
-        }else if(emailUsuario.value != emailConfirmacao.value){
+        }else if(emailUsuarioRegistro.value != emailConfirmacao.value){
             window.alert("E-mail e confirmação do e-mail diferentes.")
-        }else if(emailUsuario.value == emailConfirmacao.value && emailUsuario.value !== "" && checkboxCheck.checked == true && senhaUsuario.value != senhaConfirmacao.value){
+        }else if(emailUsuarioRegistro.value == emailConfirmacao.value && emailUsuarioRegistro.value !== "" && checkboxCheck.checked == true && senhaUsuario.value != senhaConfirmacao.value){
             window.alert("Senha e confirmação de senha estão diferentes")
-        }else if(emailUsuario.value == emailConfirmacao.value && emailUsuario.value !== "" && senhaUsuario.value == senhaConfirmacao.value && senhaUsuario.value !== "" && checkboxCheck.checked == false){
+        }else if(emailUsuarioRegistro.value == emailConfirmacao.value && emailUsuarioRegistro.value !== "" && senhaUsuario.value == senhaConfirmacao.value && senhaUsuario.value !== "" && checkboxCheck.checked == false){
             window.alert(`Para se cadastrar você precisa aceitar nossos termos de uso`)
-        }else if(emailUsuario.value == emailConfirmacao.value && emailUsuario.value !== "" && checkboxCheck.checked == false && senhaUsuario.value != senhaConfirmacao.value){
+        }else if(emailUsuarioRegistro.value == emailConfirmacao.value && emailUsuarioRegistro.value !== "" && checkboxCheck.checked == false && senhaUsuario.value != senhaConfirmacao.value){
             window.alert("Senha e confirmação de senha estão diferentes")
         }else{
             window.alert("Você precisa preencher todos os campos para efetuar o registro")
+        }
+}
+
+function validarLogin(){
+    let loginUsuario = document.getElementById("user");
+    let senhaUsuarioLogin = document.getElementById("password-login");
+        if(loginUsuario.value != "" && senhaUsuarioLogin.value != "" && loginUsuario.value.length >= 6 && senhaUsuarioLogin.value.length >= 6){
+            window.alert(`Bem vindo ${loginUsuario.value}`)
+        }else if(loginUsuario.value.length < 6 && senhaUsuarioLogin.value.length < 6){
+            window.alert("Seu login e senha precisam ter no minimo 6 caracteres.")
+        }else{
+            window.alert("Conta não registrada")
         }
 }
 
